@@ -72,13 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9387FF1119E49E7D00ABD36D = {
+		93224C2819E4D90600D4AAFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				93224C2619E4CF7F00D4AAFA /* UIKit.framework */,
 				93224C2419E4CF7B00D4AAFA /* Foundation.framework */,
 				9387FF4719E49FDE00ABD36D /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9387FF1119E49E7D00ABD36D = {
+			isa = PBXGroup;
+			children = (
 				9387FF1C19E49E7D00ABD36D /* RSACrypto */,
+				93224C2819E4D90600D4AAFA /* Frameworks */,
 				9387FF3619E49E7D00ABD36D /* RSACryptoTests */,
 				9387FF1B19E49E7D00ABD36D /* Products */,
 			);
