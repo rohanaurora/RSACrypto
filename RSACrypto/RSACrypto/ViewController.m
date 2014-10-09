@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "RSACrypto.h"
 
 @interface ViewController ()
 
@@ -17,11 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    NSString *keyPath = [[NSBundle mainBundle] pathForResource:@"public_key" ofType:@"der"];
+    RSACrypto *rsa = [[RSACrypto alloc] initWithPublicKey:keyPath];
+    
+    NSString *plainText = @"Hello World!";
+    NSString *encryptedString = [rsa encryptToString:plainText];
+    
+    NSLog(@"Plain Text:  \n\n%@\n\n", plainText);
+    NSLog(@"Encrypted String:  \n\n%@", encryptedString);
 }
 
 @end

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		93224C2519E4CF7B00D4AAFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93224C2419E4CF7B00D4AAFA /* Foundation.framework */; };
 		93224C2719E4CF7F00D4AAFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93224C2619E4CF7F00D4AAFA /* UIKit.framework */; };
+		9374F2C219E67BE6006D185F /* cert.csr in Resources */ = {isa = PBXBuildFile; fileRef = 9374F2BF19E67BE6006D185F /* cert.csr */; };
+		9374F2C319E67BE6006D185F /* privKey.pem in Resources */ = {isa = PBXBuildFile; fileRef = 9374F2C019E67BE6006D185F /* privKey.pem */; };
+		9374F2C419E67BE6006D185F /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 9374F2C119E67BE6006D185F /* public_key.der */; };
 		9387FF2019E49E7D00ABD36D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9387FF1F19E49E7D00ABD36D /* main.m */; };
 		9387FF2319E49E7D00ABD36D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9387FF2219E49E7D00ABD36D /* AppDelegate.m */; };
 		9387FF2619E49E7D00ABD36D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9387FF2519E49E7D00ABD36D /* ViewController.m */; };
@@ -33,6 +36,9 @@
 /* Begin PBXFileReference section */
 		93224C2419E4CF7B00D4AAFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93224C2619E4CF7F00D4AAFA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9374F2BF19E67BE6006D185F /* cert.csr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.csr; sourceTree = "<group>"; };
+		9374F2C019E67BE6006D185F /* privKey.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = privKey.pem; sourceTree = "<group>"; };
+		9374F2C119E67BE6006D185F /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
 		9387FF1A19E49E7D00ABD36D /* RSACrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSACrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9387FF1E19E49E7D00ABD36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9387FF1F19E49E7D00ABD36D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -82,10 +88,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9374F2C519E67BF3006D185F /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				9374F2BF19E67BE6006D185F /* cert.csr */,
+				9374F2C019E67BE6006D185F /* privKey.pem */,
+				9374F2C119E67BE6006D185F /* public_key.der */,
+			);
+			name = Certificates;
+			path = RSACrypto;
+			sourceTree = "<group>";
+		};
+		9374F2C619E67C07006D185F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9387FF2719E49E7D00ABD36D /* Main.storyboard */,
+				9387FF2419E49E7D00ABD36D /* ViewController.h */,
+				9387FF2519E49E7D00ABD36D /* ViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9374F2C719E67C19006D185F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9387FF2119E49E7D00ABD36D /* AppDelegate.h */,
+				9387FF2219E49E7D00ABD36D /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
 		9387FF1119E49E7D00ABD36D = {
 			isa = PBXGroup;
 			children = (
+				9374F2C519E67BF3006D185F /* Certificates */,
 				9387FF1C19E49E7D00ABD36D /* RSACrypto */,
+				9387FF1D19E49E7D00ABD36D /* Supporting Files */,
 				93224C2819E4D90600D4AAFA /* Frameworks */,
 				9387FF3619E49E7D00ABD36D /* RSACryptoTests */,
 				9387FF1B19E49E7D00ABD36D /* Products */,
@@ -104,13 +142,9 @@
 		9387FF1C19E49E7D00ABD36D /* RSACrypto */ = {
 			isa = PBXGroup;
 			children = (
+				9374F2C719E67C19006D185F /* AppDelegate */,
 				9387FF4619E49F5000ABD36D /* RSA Encryption Classes */,
-				9387FF2119E49E7D00ABD36D /* AppDelegate.h */,
-				9387FF2219E49E7D00ABD36D /* AppDelegate.m */,
-				9387FF2419E49E7D00ABD36D /* ViewController.h */,
-				9387FF2519E49E7D00ABD36D /* ViewController.m */,
-				9387FF2719E49E7D00ABD36D /* Main.storyboard */,
-				9387FF1D19E49E7D00ABD36D /* Supporting Files */,
+				9374F2C619E67C07006D185F /* View Controllers */,
 			);
 			path = RSACrypto;
 			sourceTree = "<group>";
@@ -124,6 +158,7 @@
 				9387FF1F19E49E7D00ABD36D /* main.m */,
 			);
 			name = "Supporting Files";
+			path = RSACrypto;
 			sourceTree = "<group>";
 		};
 		9387FF3619E49E7D00ABD36D /* RSACryptoTests */ = {
@@ -232,9 +267,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9374F2C219E67BE6006D185F /* cert.csr in Resources */,
 				9387FF2919E49E7D00ABD36D /* Main.storyboard in Resources */,
+				9374F2C419E67BE6006D185F /* public_key.der in Resources */,
 				9387FF2E19E49E7D00ABD36D /* LaunchScreen.xib in Resources */,
 				9387FF2B19E49E7D00ABD36D /* Images.xcassets in Resources */,
+				9374F2C319E67BE6006D185F /* privKey.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
