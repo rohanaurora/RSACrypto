@@ -109,13 +109,13 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		9374F2C719E67C19006D185F /* AppDelegate */ = {
+		9374F2C719E67C19006D185F /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				9387FF2119E49E7D00ABD36D /* AppDelegate.h */,
 				9387FF2219E49E7D00ABD36D /* AppDelegate.m */,
 			);
-			name = AppDelegate;
+			name = Delegate;
 			sourceTree = "<group>";
 		};
 		9387FF1119E49E7D00ABD36D = {
@@ -142,7 +142,7 @@
 		9387FF1C19E49E7D00ABD36D /* RSACrypto */ = {
 			isa = PBXGroup;
 			children = (
-				9374F2C719E67C19006D185F /* AppDelegate */,
+				9374F2C719E67C19006D185F /* Delegate */,
 				9387FF4619E49F5000ABD36D /* RSA Encryption Classes */,
 				9374F2C619E67C07006D185F /* View Controllers */,
 			);
