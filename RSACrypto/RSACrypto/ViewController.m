@@ -19,8 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    NSString *keyPath = [[NSBundle mainBundle] pathForResource:@"public_key" ofType:@"der"];
-    RSACrypto *rsa = [[RSACrypto alloc] initWithPublicKey:keyPath];
+    self.keypath = [[NSBundle mainBundle] pathForResource:@"public_key" ofType:@"der"];
+    RSACrypto *rsa = [[RSACrypto alloc] initWithPublicKey:self.keypath];
     
     NSString *plainText = @"Hello World!";
     NSString *encryptedString = [rsa encryptToString:plainText];
