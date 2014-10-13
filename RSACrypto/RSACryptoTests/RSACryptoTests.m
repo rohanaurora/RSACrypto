@@ -8,33 +8,41 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "RSACrypto.h"
+#import "ViewController.h"
 
 @interface RSACryptoTests : XCTestCase
-
+@property (nonatomic) ViewController *vc;
 @end
 
 @implementation RSACryptoTests
 
 - (void)setUp {
+    
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    self.vc = [[ViewController alloc] init];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+
+    self.vc = nil;
+    
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+-(void) testVCNotNil {
+    
+    XCTAssertNotNil(self.vc, @"VC is nil");
+    
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+-(void) testCertificateNotNil {
+
+    self.vc.keypath = [[NSBundle mainBundle] pathForResource:@"public_key" ofType:@"der"];
+
+    XCTAssertNotNil(self.vc.keypath, @"Certificate is nil");
 }
+
 
 @end
