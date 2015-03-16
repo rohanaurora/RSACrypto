@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic) NSString *keypath;
+@property (nonatomic, strong, readwrite) NSString *keypath;
+
 @end
 
